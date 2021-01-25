@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6C5A35C8-606B-4CD6-936A-3D08512CD558}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GrandQuizz</RootNamespace>
+    <AssemblyName>GrandQuizz</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>quizlogo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>70B08896DABA5FAF4E0F4D07A61EB7E78DF8BEDF</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>GrandQuizz_1_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBoxManager.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="GrandQuizz_1_TemporaryKey.pfx" />
+    <None Include="GrandQuizz_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\arrow.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\codegeass.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\doctorwho.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\drstone.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\FastandFurious.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\powerrangers.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\Shaman_King.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\supergirl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\theflash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\questions.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\Blindspot.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\Bull.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\Castle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\CriminalMinds.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\NCIS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\scorpion.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\Supernatural.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\SwampThing.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\TheBoys.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\Lucifer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\LegendsOfTomorrow.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\genshinimpact.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\Haikyuu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\DarlingintheFranXX.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\Btooom.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\BlackBullet.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\AngelBeats.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\AkameGaKill.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\AccelWorld.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\absoluteduo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\Charlotte.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\violetevergarden.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\toradora.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\swordartonline.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\steinsgate.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\onepunchman.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\neongenesisevangelion.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\nogamenolife.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\kakegurui.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\Defenders.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\IronFist.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\JessicaJones.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\LukeCage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\punisher.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\Daredevil.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\TheOrder.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\x-files.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\thewitcher.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\csimiami.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\Bones.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\suits.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 et x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\911.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\Alertecobra.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\alias.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\batwoman.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\blacklightning.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\blacklist.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\charmed.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\chicagomed.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\chicagopd.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\Insaisissables.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\colony.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\covertaffairs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\cursed.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\starwars.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\diagnosticmeurtre.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\doompatrol.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\dynastie.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\emergence.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\fbi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\gooddoctor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\highlander.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\hudsonetrex.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\instinct.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\legacies.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\macgyver.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\magnum.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\manifest.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\lacasadepapel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\prodigalson.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\swat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\sealteam.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="quizlogo.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
